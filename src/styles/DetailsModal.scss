@@ -1,0 +1,198 @@
+@import "./_variables";
+@import "./mixin";
+
+.crediservice {
+  &__title {
+    @include letter(
+      $robotoMedium,
+      32px,
+      40px,
+      normal,
+      #000000,
+      var(--sp-spacing-0)
+    );
+    text-align: left;
+    font-weight: 500;
+    margin-bottom: 16px;
+  }
+
+  &__instructions {
+    &__title {
+      @include letter(
+        $robotoMedium,
+        24px,
+        36px,
+        normal,
+        #000000,
+        var(--sp-spacing-0)
+      );
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+  }
+
+  &__icon {
+    @include letter(
+      $robotoRegular,
+      16px,
+      24px,
+      normal,
+      #5c5c5c,
+      var(--sp-spacing-0)
+    );
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__icon span {
+    font-size: 24px;
+    color: #0043a9;
+    margin-right: 16px;
+  }
+  &__no-fee {
+    @include letter(
+      $robotoMedium,
+      24px,
+      36px,
+      normal,
+      #000000,
+      var(--sp-spacing-0)
+    );
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  &__conditions {
+    @include letter(
+      $robotoRegular,
+      16px,
+      24px,
+      normal,
+      #444444,
+      var(--sp-spacing-0)
+    );
+    text-align: left;
+    font-weight: 400;
+  }
+
+  &__no-fee-conditions {
+    @include letter(
+      $robotoRegular,
+      12px,
+      18px,
+      normal,
+      #444444,
+      var(--sp-spacing-0)
+    );
+    font-weight: 400;
+    margin-bottom: 40px;
+    margin-top: 16px;
+  }
+
+  &__button {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__button button {
+    width: 210px;
+    height: 48px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .crediservice {
+    &__title {
+      @include letter(
+        $robotoMedium,
+        24px,
+        36px,
+        normal,
+        #000000,
+        var(--sp-spacing-0)
+      );
+      text-align: left;
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    &__instructions {
+      &__title {
+        @include letter(
+          $robotoMedium,
+          20px,
+          28px,
+          normal,
+          #000000,
+          var(--sp-spacing-0)
+        );
+        font-weight: 500;
+        margin-bottom: 16px;
+      }
+    }
+
+    &__icon {
+      @include letter(
+        $robotoRegular,
+        16px,
+        24px,
+        normal,
+        #5c5c5c,
+        var(--sp-spacing-0)
+      );
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+    }
+
+    &__icon span {
+      font-size: 24px;
+      color: #0043a9;
+      margin-right: 16px;
+    }
+    &__no-fee {
+      @include letter(
+        $robotoMedium,
+        20px,
+        28px,
+        normal,
+        #000000,
+        var(--sp-spacing-0)
+      );
+      font-weight: 500;
+      margin-bottom: 8px;
+    }
+    &__conditions {
+      @include letter(
+        $robotoRegular,
+        16px,
+        24px,
+        normal,
+        #444444,
+        var(--sp-spacing-0)
+      );
+      text-align: left;
+      font-weight: 400;
+    }
+
+    &__no-fee-conditions {
+      @include letter(
+        $robotoRegular,
+        12px,
+        18px,
+        normal,
+        #5c5c5c,
+        var(--sp-spacing-0)
+      );
+      font-weight: 400;
+      margin-bottom: 40px;
+      margin-top: 16px;
+    }
+
+    &__button {
+      width: 100%;
+    }
+    &__button button{
+      width: 100%;
+    }
+  }
+}

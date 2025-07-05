@@ -1,0 +1,37 @@
+@import "./_variables";
+@import "./mixin";
+
+.offer-info-box {
+  &__heading {
+    @include letter($KiffoSemiBold,32px,40px,normal,#333333,var(--sp-spacing-0));
+    text-align: left;
+  }
+
+  &__paragraph {
+    @include letter(
+      $robotoRegular,
+      16px,
+      16px,
+      normal,
+      var(--sp-carbon-800),
+      var(--sp-spacing-0)
+    );
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #444444;
+  }
+
+  &__paragraph-text {
+    margin-top: 0;
+    margin-bottom: 0;
+    
+  }
+
+  &__heading-text {
+    margin-top: 40px;
+    margin-bottom: 24px;
+  }
+}

@@ -1,0 +1,516 @@
+@import "./_variables";
+@import "./mixin";
+
+.buttons {
+  display: flex;
+  gap: 16px; 
+}
+
+.product-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 16px 0;
+  background-color: #fff;
+}
+
+.product-card__header {
+  margin-bottom: 12px;
+}
+
+.product-card__tag-mobile {
+  display: flex;
+}
+
+.product-card__logo-tag-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-card-disabled__logo-tag-section {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.product-card__tag-tablet {
+  display: none;
+}
+
+.product-card__icon {
+  display: flex;
+}
+
+.product-card__details {
+  flex: 1;
+}
+
+.product-card__title {
+  @include letter($robotoMedium,
+    14px,
+    16px,
+    normal,
+    var(--sp-carbon-800),
+    var(--sp-spacing-0));
+  color: rgba(0, 0, 0, 1);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 24px;
+  margin-bottom: 4px
+}
+
+.product-card__amount,
+.product-card__rate {
+  @include letter($robotoRegular,
+    14px,
+    16px,
+    normal,
+    var(--sp-carbon-800),
+    var(--sp-spacing-0));
+  color: rgba(68, 68, 68, 1);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  margin-bottom: 4px
+}
+
+.product-card__description {
+  @include letter($robotoRegular,
+    14px,
+    16px,
+    normal,
+    var(--sp-carbon-800),
+    var(--sp-spacing-0));
+  color: rgba(68, 68, 68, 1);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.product-card__button1 {
+  width: 109px;
+  
+}
+.product-card__button2 {
+  width: 140px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 599px) {
+
+  .product-card__header {
+    flex-direction: column;
+    margin-bottom: 12px;
+  }
+
+  .product-card__icon {
+    align-self: flex-start;
+  }
+
+  .product-card__details {
+    align-self: flex-start;
+    margin-top: 16px;
+  }
+
+}
+.product-card__details {
+  margin-top: 16px;
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .product-card__header {
+    flex-direction: row-reverse;
+    margin-bottom: 12px;
+  }
+
+  .product-card__tag-mobile {
+    display: none;
+  }
+
+  .product-card__tag-tablet {
+    display: flex;
+  }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product-card__header {
+    flex-direction: row-reverse;
+    margin-bottom: 12px;
+  }
+
+  .product-card__tag-mobile {
+    display: none;
+  }
+
+  .product-card__tag-tablet {
+    display: flex;
+  }
+
+}
+
+@media (min-width: 1025px) {
+  .product-card__header {
+    flex-direction: row-reverse;
+    margin-bottom: 12px;
+  }
+
+  .product-card__tag-mobile {
+    display: none;
+  }
+
+  .product-card__tag-tablet {
+    display: flex;
+  }
+}
+
+.product-card-disabled {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 16px 0;
+  background-color: #F2F2F2;
+}
+
+.product-card-disabled__header {
+  display: flex;
+  align-items: start;
+  margin-bottom: 12px;
+}
+
+.product-card-disabled__icon {
+  display: flex;
+}
+
+.product-card-disabled__details {
+  flex: 1;
+}
+
+.product-card-disabled__title {
+  @include letter($robotoMedium,
+    14px,
+    16px,
+    normal,
+    var(--sp-carbon-800),
+    var(--sp-spacing-0));
+  color: #666666;
+
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 24px;
+  margin-bottom: 4px
+}
+
+.product-card-disabled__amount,
+.product-card-disabled__rate {
+  @include letter($robotoRegular,
+    14px,
+    16px,
+    normal,
+    var(--sp-carbon-800),
+    var(--sp-spacing-0));
+  color: #666666;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  margin-bottom: 4px
+}
+
+.product-card-disabled__description {
+  @include letter($robotoRegular,
+    14px,
+    16px,
+    normal,
+    var(--sp-carbon-800),
+    var(--sp-spacing-0));
+  color: #666666;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.product-card-disabled__button1 {
+  width: 109px;
+}
+.product-card-disabled__button2 {
+  width: 140px;
+}
+@media (max-width: 599px) {
+
+  .product-card-disabled__header {
+    flex-direction: column;
+    margin-bottom: 12px;
+  }
+
+  .product-card-disabled__icon {
+    display: flex;
+    align-self: flex-start;
+  }
+
+  .product-card-disabled__details {
+    align-self: flex-start;
+    margin-top: 16px;
+  }
+
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .product-card-disabled__header {
+    flex-direction: row-reverse;
+    margin-bottom: 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .product-card-disabled__header {
+    flex-direction: row-reverse;
+    margin-bottom: 12px;
+  }
+
+}
+
+@media (min-width: 1025px) {
+  .product-card-disabled__header {
+    flex-direction: row-reverse;
+    margin-bottom: 12px;
+  }
+
+}
+
+.vehicle-card {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 16px 0;
+  background-color: #fff;
+}
+
+.vehicle-card__header {
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.vehicle-card__details {
+  flex: 1;
+}
+
+.vehicle-card__title {
+  @include letter($robotoMedium,
+    14px,
+    16px,
+    normal,
+    var(--sp-carbon-800),
+    var(--sp-spacing-0));
+  color: rgba(0, 0, 0, 1);
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 24px;
+  margin-bottom: 4px
+}
+
+.vehicle-card__amount,
+.vehicle-card__rate {
+  @include letter($robotoRegular,
+    14px,
+    16px,
+    normal,
+    var(--sp-carbon-800),
+    var(--sp-spacing-0));
+  color: rgba(68, 68, 68, 1);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  margin-bottom: 4px
+}
+
+.vehicle-card__description {
+  @include letter($robotoRegular,
+    14px,
+    16px,
+    normal,
+    var(--sp-carbon-800),
+    var(--sp-spacing-0));
+  color: rgba(68, 68, 68, 1);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.vehicle-card__button1 {
+  width: 109px;
+}
+.vehicle-card__button2 {
+  width: 140px;
+}
+@media (max-width: 599px) {
+
+  .vehicle-card__header {
+    flex-direction: column;
+    margin-bottom: 12px;
+  }
+
+  .vehicle-card__icon {
+    align-self: flex-start;
+  }
+
+  .vehicle-card__details {
+    align-self: flex-start;
+    margin-top: 16px;
+  }
+
+}
+.vehicle-card__details {
+  margin-top: 16px;
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .vehicle-card__header {
+    flex-direction: row-reverse;
+    margin-bottom: 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .vehicle-card__header {
+    flex-direction: row-reverse;
+    margin-bottom: 12px;
+  }
+
+}
+
+@media (min-width: 1025px) {
+  .vehicle-card__header {
+    flex-direction: row-reverse;
+    margin-bottom: 12px;
+  }
+}
+
+.vehicle-card-disabled {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 24px;
+  margin: 16px 0;
+  background-color: #F2F2F2;
+}
+
+.vehicle-card-disabled__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.vehicle-card-disabled__details {
+  flex: 1;
+}
+
+.vehicle-card-disabled__title {
+  @include letter($robotoMedium,
+    14px,
+    16px,
+    normal,
+    var(--sp-carbon-800),
+    var(--sp-spacing-0));
+  color: #666666;
+
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 24px;
+  margin-bottom: 4px
+}
+
+.vehicle-card-disabled__amount,
+.vehicle-card-disabled__rate {
+  @include letter($robotoRegular,
+    14px,
+    16px,
+    normal,
+    var(--sp-carbon-800),
+    var(--sp-spacing-0));
+  color: #666666;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  margin-bottom: 4px
+}
+
+.vehicle-card-disabled__description {
+  @include letter($robotoRegular,
+    14px,
+    16px,
+    normal,
+    var(--sp-carbon-800),
+    var(--sp-spacing-0));
+  color: #666666;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.2px;
+  line-height: 20px;
+  margin-top: 12px;
+  margin-bottom: 16px;
+}
+
+.vehicle-card-disabled__button1 {
+  width: 109px;
+}
+.vehicle-card-disabled__button2 {
+  width: 140px;
+}
+@media (max-width: 599px) {
+
+  .vehicle-card-disabled__header {
+    flex-direction: column;
+    margin-bottom: 12px;
+  }
+
+  .vehicle-card-disabled__icon {
+    align-self: flex-start;
+  }
+
+  .vehicle-card-disabled__details {
+    align-self: flex-start;
+    margin-top: 16px;
+  }
+
+
+}
+
+@media (min-width: 600px) and (max-width: 767px) {
+  .vehicle-card-disabled__header {
+    flex-direction: row-reverse;
+    margin-bottom: 12px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .vehicle-card-disabled__header {
+    flex-direction: row-reverse;
+    margin-bottom: 12px;
+  }
+
+}
+
+@media (min-width: 1025px) {
+  .vehicle-card-disabled__header {
+    flex-direction: row-reverse;
+    margin-bottom: 12px;
+  }
+
+}
