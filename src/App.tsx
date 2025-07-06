@@ -1,9 +1,9 @@
 import React, {lazy, Suspense} from 'react';
 import {BrowserRouter, Link, Route, Routes} from 'react-router-dom';
 import {CustRlbButton, CustRlbHeader} from './constants/sherpa-tagged-components';
-/*const App1 = lazy(() => import('app1/App'));
+const App1 = lazy(() => import('app1/App'));
 const App2 = lazy(() => import('app2/App'));
-const OtherPage = lazy(() => import('app2/OtherPage'));*/
+const OtherPage = lazy(() => import('app2/OtherPage'));
 
 function App() {
   return (
@@ -29,9 +29,9 @@ function App() {
                               onClickButton={() => console.log('clicked')}
                           />
                       </>}/>
-                      <Route path="/app1" element={<h2>APP ONE</h2>}/>
-                      <Route path="/app2" element={<h2>APP TWO</h2>}/>
-                      <Route path="/other-page" element={<h2>Other Page</h2>}/>
+                      <Route path="/app1" element={<App1/>}/>
+                      <Route path="/app2" element={<App2/>}/>
+                      <Route path="/other-page" element={<OtherPage/>}/>
                   </Routes>
               </Suspense>
           </BrowserRouter>
